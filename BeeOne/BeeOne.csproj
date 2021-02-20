@@ -1,0 +1,1689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7257A10B-5EFA-4987-BA78-3ED4A802E447}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeeOne</RootNamespace>
+    <AssemblyName>BeeOne</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.5.3\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BEEONEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BEEONEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BEEONEDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BEEONEDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BEEONE_Sistem_Kodlari.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BEEONE_Sistem_Kodlari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Banka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Banka.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Banka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_CariHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_Diger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_Diger.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_CariHesap_Diger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_Iletisim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_Iletisim.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_CariHesap_Iletisim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_TicariBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_CariHesap_TicariBilgiler.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_CariHesap_TicariBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Kasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Kasa.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Kasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Muhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Muhasebe.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Muhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_SabitKiymet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_SabitKiymet.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_SabitKiymet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Stok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_AlternatifMalzemeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_AlternatifMalzemeler.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Stok_AlternatifMalzemeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_FiyatBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_FiyatBilgisi.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Stok_FiyatBilgisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_GenelBilgiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_GenelBilgiler.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Stok_GenelBilgiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_MuhasebeHesaplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar_Stok_MuhasebeHesaplari.Designer.cs">
+      <DependentUpon>frmAnaKayitlar_Stok_MuhasebeHesaplari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCariHesap_FişGenel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCariHesap_FişGenel.Designer.cs">
+      <DependentUpon>frmCariHesap_FişGenel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari.Designer.cs">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari_Detay.Designer.cs">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatinAlmaFaturalari_Fis.Designer.cs">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari.Designer.cs">
+      <DependentUpon>frmFatura_SatisFaturalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari_Detay.Designer.cs">
+      <DependentUpon>frmFatura_SatisFaturalari_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura_SatisFaturalari_Fis.Designer.cs">
+      <DependentUpon>frmFatura_SatisFaturalari_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinans_BankaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinans_BankaIslemleri.Designer.cs">
+      <DependentUpon>frmFinans_BankaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinans_CekSenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinans_CekSenet.Designer.cs">
+      <DependentUpon>frmFinans_CekSenet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinans_KasaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinans_KasaIslemleri.Designer.cs">
+      <DependentUpon>frmFinans_KasaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGuvenlikKodu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGuvenlikKodu.Designer.cs">
+      <DependentUpon>frmGuvenlikKodu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Banka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Banka.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_Banka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_CariHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_CariHesap.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_CariHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Kasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Kasa.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_Kasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Muhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Muhasebe.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_Muhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_SabitKiymet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_SabitKiymet.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_SabitKiymet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_AnaKayitlar_Stok.Designer.cs">
+      <DependentUpon>frmL_AnaKayitlar_Stok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_CariHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_CariHesap.Designer.cs">
+      <DependentUpon>frmL_CariHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Fatura_SatinAlmaFaturalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Fatura_SatinAlmaFaturalari.Designer.cs">
+      <DependentUpon>frmL_Fatura_SatinAlmaFaturalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Fatura_SatisFaturalari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Fatura_SatisFaturalari.Designer.cs">
+      <DependentUpon>frmL_Fatura_SatisFaturalari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Finans_BankaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Finans_BankaIslemleri.Designer.cs">
+      <DependentUpon>frmL_Finans_BankaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Finans_CekSenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Finans_CekSenet.Designer.cs">
+      <DependentUpon>frmL_Finans_CekSenet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Finans_KasaIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Finans_KasaIslemleri.Designer.cs">
+      <DependentUpon>frmL_Finans_KasaIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Muhasebe_MuhasebeFis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Muhasebe_MuhasebeFis.Designer.cs">
+      <DependentUpon>frmL_Muhasebe_MuhasebeFis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_Muhasebe_YevmiyeNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_Muhasebe_YevmiyeNo.Designer.cs">
+      <DependentUpon>frmL_Muhasebe_YevmiyeNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_SabitKiymet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_SabitKiymet.Designer.cs">
+      <DependentUpon>frmL_SabitKiymet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_MaliyetFis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_MaliyetFis.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_MaliyetFis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_MalzemeFis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_MalzemeFis.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_MalzemeFis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatinAlmaIrsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatinAlmaIrsaliye.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_SatinAlmaIrsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatinAlmaSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatinAlmaSiparisleri.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_SatinAlmaSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatisIrsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatisIrsaliye.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_SatisIrsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatisSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmL_StokIslemleri_SatisSiparisleri.Designer.cs">
+      <DependentUpon>frmL_StokIslemleri_SatisSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMuhasebe_MuhasebeFisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuhasebe_MuhasebeFisleri.Designer.cs">
+      <DependentUpon>frmMuhasebe_MuhasebeFisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor.Designer.cs">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka.Designer.cs">
+      <DependentUpon>frmRapor_Banka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaDurum.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BankaDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaFisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaFisListesi.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BankaFisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaHesapEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaHesapEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BankaHesapEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BankaListesi.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BankaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BGeriOdemeHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BGeriOdemeHareketleri.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BGeriOdemeHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BHareketleriDokumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BHareketleriDokumu.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BHareketleriDokumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BKredileriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BKredileriListesi.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BKredileriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BKrediTaksitleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_BKrediTaksitleri.Designer.cs">
+      <DependentUpon>frmRapor_Banka_BKrediTaksitleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_FirmaKKEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_FirmaKKEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Banka_FirmaKKEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Banka_HesapDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Banka_HesapDurum.Designer.cs">
+      <DependentUpon>frmRapor_Banka_HesapDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AlacakliCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AlacakliCH.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_AlacakliCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AyrintiliOdemeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AyrintiliOdemeListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_AyrintiliOdemeListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AyrintiliTahsilatListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_AyrintiliTahsilatListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_AyrintiliTahsilatListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcAlacakDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcAlacakDurum.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_BorcAlacakDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcAlacakToplamlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcAlacakToplamlari.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_BorcAlacakToplamlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcluCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcluCH.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_BorcluCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcTakip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_BorcTakip.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_BorcTakip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHFisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHFisListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHFisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHHareketDokumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHHareketDokumu.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHHareketDokumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHIletisimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHIletisimBilgileri.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHIletisimBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_CHOzeti.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_CHOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_KapanmamisFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_KapanmamisFaturalar.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_KapanmamisFaturalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_OdemeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_OdemeListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_OdemeListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_OrtalamaVade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_OrtalamaVade.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_OrtalamaVade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_TahsilatListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_TahsilatListesi.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_TahsilatListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_TaksitHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CariHesap_TaksitHareketleri.Designer.cs">
+      <DependentUpon>frmRapor_CariHesap_TaksitHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_AyrintiliBordro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_AyrintiliBordro.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_AyrintiliBordro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_BorcYaslandirma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_BorcYaslandirma.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_BorcYaslandirma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_FirmaCekSenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_FirmaCekSenet.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_FirmaCekSenet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_FirmaReeskont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_FirmaReeskont.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_FirmaReeskont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_MusteriCekSenet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_MusteriCekSenet.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_MusteriCekSenet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_MusteriReeskont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_MusteriReeskont.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_MusteriReeskont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_OzetBordro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_CekSenet_OzetBordro.Designer.cs">
+      <DependentUpon>frmRapor_CekSenet_OzetBordro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura.Designer.cs">
+      <DependentUpon>frmRapor_Fatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_GenelDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_GenelDurum.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_GenelDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_KDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_KDV.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_KDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_MalzemeSatislariEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_MalzemeSatislariEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_MalzemeSatislariEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatinAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatinAlma.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_SatinAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatinAlmaIrsaliyeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatinAlmaIrsaliyeleri.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_SatinAlmaIrsaliyeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_Satis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_Satis.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_Satis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisElemaniPerformansi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisElemaniPerformansi.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_SatisElemaniPerformansi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisIrsaliyeleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisIrsaliyeleri.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_SatisIrsaliyeleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisKarlilikAnalizi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Fatura_SatisKarlilikAnalizi.Designer.cs">
+      <DependentUpon>frmRapor_Fatura_SatisKarlilikAnalizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Kasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Kasa.Designer.cs">
+      <DependentUpon>frmRapor_Kasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Kasa_KasaEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Kasa_KasaEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Kasa_KasaEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Kasa_KasaHesapOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Kasa_KasaHesapOzeti.Designer.cs">
+      <DependentUpon>frmRapor_Kasa_KasaHesapOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_2TarihArasiMizan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_2TarihArasiMizan.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_2TarihArasiMizan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_AylikMizan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_AylikMizan.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_AylikMizan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_AyrintiliFisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_AyrintiliFisListesi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_AyrintiliFisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_BilancoTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_BilancoTablosu.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_BilancoTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_GeciciVergiBeyannamesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_GeciciVergiBeyannamesi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_GeciciVergiBeyannamesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_GenelMizan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_GenelMizan.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_GenelMizan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_HesapOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_HesapOzeti.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_HesapOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_KarZamanTablosu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_KarZamanTablosu.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_KarZamanTablosu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_KDVBeyannamesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_KDVBeyannamesi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_KDVBeyannamesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MasrafMerkezi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MasrafMerkezi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MasrafMerkezi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMDurum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMDurum.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MMDurum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MMEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMHesapDagilim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MMHesapDagilim.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MMHesapDagilim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MuhasebeHesapListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MuhasebeHesapListesi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MuhasebeHesapListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MuhtasarBeyanname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_MuhtasarBeyanname.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_MuhtasarBeyanname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_NakitAkis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_NakitAkis.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_NakitAkis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_OzetFisListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Muhasebe_OzetFisListesi.Designer.cs">
+      <DependentUpon>frmRapor_Muhasebe_OzetFisListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_AmortismanOzeti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_AmortismanOzeti.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_AmortismanOzeti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_AmortismanTablolari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_AmortismanTablolari.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_AmortismanTablolari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKDurumu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKDurumu.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_SKDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKEnflasyonFarklari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKEnflasyonFarklari.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_SKEnflasyonFarklari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKListesi.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_SKListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKMizani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_SabitKiymet_SKMizani.Designer.cs">
+      <DependentUpon>frmRapor_SabitKiymet_SKMizani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok.Designer.cs">
+      <DependentUpon>frmRapor_Stok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliMaliyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliMaliyet.Designer.cs">
+      <DependentUpon>frmRapor_Stok_AyrintiliMaliyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliSatinAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliSatinAlma.Designer.cs">
+      <DependentUpon>frmRapor_Stok_AyrintiliSatinAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_AyrintiliSatis.Designer.cs">
+      <DependentUpon>frmRapor_Stok_AyrintiliSatis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_Envanter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_Envanter.Designer.cs">
+      <DependentUpon>frmRapor_Stok_Envanter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeAmbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeAmbar.Designer.cs">
+      <DependentUpon>frmRapor_Stok_MalzemeAmbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeEkstresi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeEkstresi.Designer.cs">
+      <DependentUpon>frmRapor_Stok_MalzemeEkstresi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeFisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeFisleri.Designer.cs">
+      <DependentUpon>frmRapor_Stok_MalzemeFisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeHareketleri.Designer.cs">
+      <DependentUpon>frmRapor_Stok_MalzemeHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_MalzemeListesi.Designer.cs">
+      <DependentUpon>frmRapor_Stok_MalzemeListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_OzetMaliyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_OzetMaliyet.Designer.cs">
+      <DependentUpon>frmRapor_Stok_OzetMaliyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_SatinAlmaSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_SatinAlmaSiparisleri.Designer.cs">
+      <DependentUpon>frmRapor_Stok_SatinAlmaSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_SatisSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_SatisSiparisleri.Designer.cs">
+      <DependentUpon>frmRapor_Stok_SatisSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_ToplamSatinAlmaRakamlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_ToplamSatinAlmaRakamlari.Designer.cs">
+      <DependentUpon>frmRapor_Stok_ToplamSatinAlmaRakamlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRapor_Stok_ToplamSatisRakamlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRapor_Stok_ToplamSatisRakamlari.Designer.cs">
+      <DependentUpon>frmRapor_Stok_ToplamSatisRakamlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSifreSifirla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSifreSifirla.Designer.cs">
+      <DependentUpon>frmSifreSifirla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaKayitlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaKayitlar.Designer.cs">
+      <DependentUpon>frmAnaKayitlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArayuz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArayuz.Designer.cs">
+      <DependentUpon>frmArayuz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCikis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCikis.Designer.cs">
+      <DependentUpon>frmCikis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFatura.Designer.cs">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFinans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFinans.Designer.cs">
+      <DependentUpon>frmFinans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKayit.Designer.cs">
+      <DependentUpon>frmKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMuhasebe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuhasebe.Designer.cs">
+      <DependentUpon>frmMuhasebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSistemKodlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSistemKodlari.Designer.cs">
+      <DependentUpon>frmSistemKodlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MaliyetFisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MaliyetFisleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri_MaliyetFisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri_Detay.Designer.cs">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_MalzemeFisleri_Fis.Designer.cs">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye_Detay.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye_Irsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaIrsaliye_Irsaliye.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye_Irsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri_Detay.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatinAlmaSiparisleri_Fis.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye_Detay.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye_Irsaliye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisIrsaliye_Irsaliye.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye_Irsaliye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri_Detay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri_Detay.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri_Detay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri_Fis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStokIslemleri_SatisSiparisleri_Fis.Designer.cs">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri_Fis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYeniSifre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYeniSifre.Designer.cs">
+      <DependentUpon>frmYeniSifre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodlar\GlobalClass.cs" />
+    <Compile Include="Metodlar\Stok.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmAnaKayitlar.resx">
+      <DependentUpon>frmAnaKayitlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Banka.resx">
+      <DependentUpon>frmAnaKayitlar_Banka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_CariHesap.resx">
+      <DependentUpon>frmAnaKayitlar_CariHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_CariHesap_Diger.resx">
+      <DependentUpon>frmAnaKayitlar_CariHesap_Diger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_CariHesap_Iletisim.resx">
+      <DependentUpon>frmAnaKayitlar_CariHesap_Iletisim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_CariHesap_TicariBilgiler.resx">
+      <DependentUpon>frmAnaKayitlar_CariHesap_TicariBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Kasa.resx">
+      <DependentUpon>frmAnaKayitlar_Kasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Muhasebe.resx">
+      <DependentUpon>frmAnaKayitlar_Muhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_SabitKiymet.resx">
+      <DependentUpon>frmAnaKayitlar_SabitKiymet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Stok.resx">
+      <DependentUpon>frmAnaKayitlar_Stok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Stok_AlternatifMalzemeler.resx">
+      <DependentUpon>frmAnaKayitlar_Stok_AlternatifMalzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Stok_FiyatBilgisi.resx">
+      <DependentUpon>frmAnaKayitlar_Stok_FiyatBilgisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Stok_GenelBilgiler.resx">
+      <DependentUpon>frmAnaKayitlar_Stok_GenelBilgiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaKayitlar_Stok_MuhasebeHesaplari.resx">
+      <DependentUpon>frmAnaKayitlar_Stok_MuhasebeHesaplari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArayuz.resx">
+      <DependentUpon>frmArayuz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCariHesap_FişGenel.resx">
+      <DependentUpon>frmCariHesap_FişGenel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCikis.resx">
+      <DependentUpon>frmCikis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura.resx">
+      <DependentUpon>frmFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatinAlmaFaturalari.resx">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatinAlmaFaturalari_Detay.resx">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatinAlmaFaturalari_Fis.resx">
+      <DependentUpon>frmFatura_SatinAlmaFaturalari_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatisFaturalari.resx">
+      <DependentUpon>frmFatura_SatisFaturalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatisFaturalari_Detay.resx">
+      <DependentUpon>frmFatura_SatisFaturalari_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFatura_SatisFaturalari_Fis.resx">
+      <DependentUpon>frmFatura_SatisFaturalari_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinans.resx">
+      <DependentUpon>frmFinans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinans_BankaIslemleri.resx">
+      <DependentUpon>frmFinans_BankaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinans_CekSenet.resx">
+      <DependentUpon>frmFinans_CekSenet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFinans_KasaIslemleri.resx">
+      <DependentUpon>frmFinans_KasaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKayit.resx">
+      <DependentUpon>frmKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_Banka.resx">
+      <DependentUpon>frmL_AnaKayitlar_Banka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_CariHesap.resx">
+      <DependentUpon>frmL_AnaKayitlar_CariHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_Kasa.resx">
+      <DependentUpon>frmL_AnaKayitlar_Kasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_Muhasebe.resx">
+      <DependentUpon>frmL_AnaKayitlar_Muhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_SabitKiymet.resx">
+      <DependentUpon>frmL_AnaKayitlar_SabitKiymet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_AnaKayitlar_Stok.resx">
+      <DependentUpon>frmL_AnaKayitlar_Stok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_CariHesap.resx">
+      <DependentUpon>frmL_CariHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Fatura_SatinAlmaFaturalari.resx">
+      <DependentUpon>frmL_Fatura_SatinAlmaFaturalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Fatura_SatisFaturalari.resx">
+      <DependentUpon>frmL_Fatura_SatisFaturalari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Finans_BankaIslemleri.resx">
+      <DependentUpon>frmL_Finans_BankaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Finans_CekSenet.resx">
+      <DependentUpon>frmL_Finans_CekSenet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Finans_KasaIslemleri.resx">
+      <DependentUpon>frmL_Finans_KasaIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Muhasebe_MuhasebeFis.resx">
+      <DependentUpon>frmL_Muhasebe_MuhasebeFis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_Muhasebe_YevmiyeNo.resx">
+      <DependentUpon>frmL_Muhasebe_YevmiyeNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_SabitKiymet.resx">
+      <DependentUpon>frmL_SabitKiymet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_MaliyetFis.resx">
+      <DependentUpon>frmL_StokIslemleri_MaliyetFis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_MalzemeFis.resx">
+      <DependentUpon>frmL_StokIslemleri_MalzemeFis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_SatinAlmaIrsaliye.resx">
+      <DependentUpon>frmL_StokIslemleri_SatinAlmaIrsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_SatinAlmaSiparisleri.resx">
+      <DependentUpon>frmL_StokIslemleri_SatinAlmaSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_SatisIrsaliye.resx">
+      <DependentUpon>frmL_StokIslemleri_SatisIrsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmL_StokIslemleri_SatisSiparisleri.resx">
+      <DependentUpon>frmL_StokIslemleri_SatisSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMuhasebe.resx">
+      <DependentUpon>frmMuhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGuvenlikKodu.resx">
+      <DependentUpon>frmGuvenlikKodu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMuhasebe_MuhasebeFisleri.resx">
+      <DependentUpon>frmMuhasebe_MuhasebeFisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor.resx">
+      <DependentUpon>frmRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka.resx">
+      <DependentUpon>frmRapor_Banka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BankaDurum.resx">
+      <DependentUpon>frmRapor_Banka_BankaDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BankaFisListesi.resx">
+      <DependentUpon>frmRapor_Banka_BankaFisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BankaHesapEkstresi.resx">
+      <DependentUpon>frmRapor_Banka_BankaHesapEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BankaListesi.resx">
+      <DependentUpon>frmRapor_Banka_BankaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BGeriOdemeHareketleri.resx">
+      <DependentUpon>frmRapor_Banka_BGeriOdemeHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BHareketleriDokumu.resx">
+      <DependentUpon>frmRapor_Banka_BHareketleriDokumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BKredileriListesi.resx">
+      <DependentUpon>frmRapor_Banka_BKredileriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_BKrediTaksitleri.resx">
+      <DependentUpon>frmRapor_Banka_BKrediTaksitleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_FirmaKKEkstresi.resx">
+      <DependentUpon>frmRapor_Banka_FirmaKKEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Banka_HesapDurum.resx">
+      <DependentUpon>frmRapor_Banka_HesapDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap.resx">
+      <DependentUpon>frmRapor_CariHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_AlacakliCH.resx">
+      <DependentUpon>frmRapor_CariHesap_AlacakliCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_AyrintiliOdemeListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_AyrintiliOdemeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_AyrintiliTahsilatListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_AyrintiliTahsilatListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_BorcAlacakDurum.resx">
+      <DependentUpon>frmRapor_CariHesap_BorcAlacakDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_BorcAlacakToplamlari.resx">
+      <DependentUpon>frmRapor_CariHesap_BorcAlacakToplamlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_BorcluCH.resx">
+      <DependentUpon>frmRapor_CariHesap_BorcluCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_BorcTakip.resx">
+      <DependentUpon>frmRapor_CariHesap_BorcTakip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHEkstresi.resx">
+      <DependentUpon>frmRapor_CariHesap_CHEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHFisListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_CHFisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHHareketDokumu.resx">
+      <DependentUpon>frmRapor_CariHesap_CHHareketDokumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHIletisimBilgileri.resx">
+      <DependentUpon>frmRapor_CariHesap_CHIletisimBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_CHListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_CHOzeti.resx">
+      <DependentUpon>frmRapor_CariHesap_CHOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_KapanmamisFaturalar.resx">
+      <DependentUpon>frmRapor_CariHesap_KapanmamisFaturalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_OdemeListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_OdemeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_OrtalamaVade.resx">
+      <DependentUpon>frmRapor_CariHesap_OrtalamaVade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_TahsilatListesi.resx">
+      <DependentUpon>frmRapor_CariHesap_TahsilatListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CariHesap_TaksitHareketleri.resx">
+      <DependentUpon>frmRapor_CariHesap_TaksitHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet.resx">
+      <DependentUpon>frmRapor_CekSenet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_AyrintiliBordro.resx">
+      <DependentUpon>frmRapor_CekSenet_AyrintiliBordro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_BorcYaslandirma.resx">
+      <DependentUpon>frmRapor_CekSenet_BorcYaslandirma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_FirmaCekSenet.resx">
+      <DependentUpon>frmRapor_CekSenet_FirmaCekSenet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_FirmaReeskont.resx">
+      <DependentUpon>frmRapor_CekSenet_FirmaReeskont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_MusteriCekSenet.resx">
+      <DependentUpon>frmRapor_CekSenet_MusteriCekSenet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_MusteriReeskont.resx">
+      <DependentUpon>frmRapor_CekSenet_MusteriReeskont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_CekSenet_OzetBordro.resx">
+      <DependentUpon>frmRapor_CekSenet_OzetBordro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura.resx">
+      <DependentUpon>frmRapor_Fatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_GenelDurum.resx">
+      <DependentUpon>frmRapor_Fatura_GenelDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_KDV.resx">
+      <DependentUpon>frmRapor_Fatura_KDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_MalzemeSatislariEkstresi.resx">
+      <DependentUpon>frmRapor_Fatura_MalzemeSatislariEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_SatinAlma.resx">
+      <DependentUpon>frmRapor_Fatura_SatinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_SatinAlmaIrsaliyeleri.resx">
+      <DependentUpon>frmRapor_Fatura_SatinAlmaIrsaliyeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_Satis.resx">
+      <DependentUpon>frmRapor_Fatura_Satis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_SatisElemaniPerformansi.resx">
+      <DependentUpon>frmRapor_Fatura_SatisElemaniPerformansi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_SatisIrsaliyeleri.resx">
+      <DependentUpon>frmRapor_Fatura_SatisIrsaliyeleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Fatura_SatisKarlilikAnalizi.resx">
+      <DependentUpon>frmRapor_Fatura_SatisKarlilikAnalizi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Kasa.resx">
+      <DependentUpon>frmRapor_Kasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Kasa_KasaEkstresi.resx">
+      <DependentUpon>frmRapor_Kasa_KasaEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Kasa_KasaHesapOzeti.resx">
+      <DependentUpon>frmRapor_Kasa_KasaHesapOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe.resx">
+      <DependentUpon>frmRapor_Muhasebe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_2TarihArasiMizan.resx">
+      <DependentUpon>frmRapor_Muhasebe_2TarihArasiMizan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_AylikMizan.resx">
+      <DependentUpon>frmRapor_Muhasebe_AylikMizan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_AyrintiliFisListesi.resx">
+      <DependentUpon>frmRapor_Muhasebe_AyrintiliFisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_BilancoTablosu.resx">
+      <DependentUpon>frmRapor_Muhasebe_BilancoTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_GeciciVergiBeyannamesi.resx">
+      <DependentUpon>frmRapor_Muhasebe_GeciciVergiBeyannamesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_GenelMizan.resx">
+      <DependentUpon>frmRapor_Muhasebe_GenelMizan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_HesapOzeti.resx">
+      <DependentUpon>frmRapor_Muhasebe_HesapOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_KarZamanTablosu.resx">
+      <DependentUpon>frmRapor_Muhasebe_KarZamanTablosu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_KDVBeyannamesi.resx">
+      <DependentUpon>frmRapor_Muhasebe_KDVBeyannamesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MasrafMerkezi.resx">
+      <DependentUpon>frmRapor_Muhasebe_MasrafMerkezi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MMDurum.resx">
+      <DependentUpon>frmRapor_Muhasebe_MMDurum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MMEkstresi.resx">
+      <DependentUpon>frmRapor_Muhasebe_MMEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MMHesapDagilim.resx">
+      <DependentUpon>frmRapor_Muhasebe_MMHesapDagilim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MuhasebeHesapListesi.resx">
+      <DependentUpon>frmRapor_Muhasebe_MuhasebeHesapListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_MuhtasarBeyanname.resx">
+      <DependentUpon>frmRapor_Muhasebe_MuhtasarBeyanname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_NakitAkis.resx">
+      <DependentUpon>frmRapor_Muhasebe_NakitAkis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Muhasebe_OzetFisListesi.resx">
+      <DependentUpon>frmRapor_Muhasebe_OzetFisListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet.resx">
+      <DependentUpon>frmRapor_SabitKiymet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_AmortismanOzeti.resx">
+      <DependentUpon>frmRapor_SabitKiymet_AmortismanOzeti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_AmortismanTablolari.resx">
+      <DependentUpon>frmRapor_SabitKiymet_AmortismanTablolari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_SKDurumu.resx">
+      <DependentUpon>frmRapor_SabitKiymet_SKDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_SKEnflasyonFarklari.resx">
+      <DependentUpon>frmRapor_SabitKiymet_SKEnflasyonFarklari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_SKListesi.resx">
+      <DependentUpon>frmRapor_SabitKiymet_SKListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_SabitKiymet_SKMizani.resx">
+      <DependentUpon>frmRapor_SabitKiymet_SKMizani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok.resx">
+      <DependentUpon>frmRapor_Stok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_AyrintiliMaliyet.resx">
+      <DependentUpon>frmRapor_Stok_AyrintiliMaliyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_AyrintiliSatinAlma.resx">
+      <DependentUpon>frmRapor_Stok_AyrintiliSatinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_AyrintiliSatis.resx">
+      <DependentUpon>frmRapor_Stok_AyrintiliSatis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_Envanter.resx">
+      <DependentUpon>frmRapor_Stok_Envanter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_MalzemeAmbar.resx">
+      <DependentUpon>frmRapor_Stok_MalzemeAmbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_MalzemeEkstresi.resx">
+      <DependentUpon>frmRapor_Stok_MalzemeEkstresi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_MalzemeFisleri.resx">
+      <DependentUpon>frmRapor_Stok_MalzemeFisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_MalzemeHareketleri.resx">
+      <DependentUpon>frmRapor_Stok_MalzemeHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_MalzemeListesi.resx">
+      <DependentUpon>frmRapor_Stok_MalzemeListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_OzetMaliyet.resx">
+      <DependentUpon>frmRapor_Stok_OzetMaliyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_SatinAlmaSiparisleri.resx">
+      <DependentUpon>frmRapor_Stok_SatinAlmaSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_SatisSiparisleri.resx">
+      <DependentUpon>frmRapor_Stok_SatisSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_ToplamSatinAlmaRakamlari.resx">
+      <DependentUpon>frmRapor_Stok_ToplamSatinAlmaRakamlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRapor_Stok_ToplamSatisRakamlari.resx">
+      <DependentUpon>frmRapor_Stok_ToplamSatisRakamlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSifreSifirla.resx">
+      <DependentUpon>frmSifreSifirla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSistemKodlari.resx">
+      <DependentUpon>frmSistemKodlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri.resx">
+      <DependentUpon>frmStokIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_MaliyetFisleri.resx">
+      <DependentUpon>frmStokIslemleri_MaliyetFisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_MalzemeFisleri.resx">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_MalzemeFisleri_Detay.resx">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_MalzemeFisleri_Fis.resx">
+      <DependentUpon>frmStokIslemleri_MalzemeFisleri_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaIrsaliye.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaIrsaliye_Detay.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaIrsaliye_Irsaliye.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaIrsaliye_Irsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaSiparisleri.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaSiparisleri_Detay.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatinAlmaSiparisleri_Fis.resx">
+      <DependentUpon>frmStokIslemleri_SatinAlmaSiparisleri_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisIrsaliye.resx">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisIrsaliye_Detay.resx">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisIrsaliye_Irsaliye.resx">
+      <DependentUpon>frmStokIslemleri_SatisIrsaliye_Irsaliye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisSiparisleri.resx">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisSiparisleri_Detay.resx">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri_Detay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStokIslemleri_SatisSiparisleri_Fis.resx">
+      <DependentUpon>frmStokIslemleri_SatisSiparisleri_Fis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYeniSifre.resx">
+      <DependentUpon>frmYeniSifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="BEEONEDataSet.xsc">
+      <DependentUpon>BEEONEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BEEONEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BEEONEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BEEONEDataSet.xss">
+      <DependentUpon>BEEONEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BEEONEDataSet11.xsc">
+      <DependentUpon>BEEONEDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BEEONEDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BEEONEDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BEEONEDataSet11.xss">
+      <DependentUpon>BEEONEDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="BEEONE_Sistem_Kodlari.xsc">
+      <DependentUpon>BEEONE_Sistem_Kodlari.xsd</DependentUpon>
+    </None>
+    <None Include="BEEONE_Sistem_Kodlari.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BEEONE_Sistem_Kodlari.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BEEONE_Sistem_Kodlari.xss">
+      <DependentUpon>BEEONE_Sistem_Kodlari.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2819%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2817%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2824%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2814%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2826%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-gradient-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2839%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2840%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2841%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background %2847%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
